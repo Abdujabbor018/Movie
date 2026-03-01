@@ -191,21 +191,17 @@ body {
     outline: none;
     transition: 0.3s;
 }
-
 .movie-form input::placeholder {
     color: #94a3b8;
 }
-
 .movie-form input:focus {
     border-color: #3b82f6;
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
 }
-
 .movie-form input[type="file"] {
     padding: 5px;
     cursor: pointer;
 }
-
 .movie-form button {
     padding: 12px;
     border-radius: 30px;
@@ -216,7 +212,6 @@ body {
     cursor: pointer;
     transition: 0.3s;
 }
-
 .movie-form button:hover {
     background: linear-gradient(135deg, #2563eb, #1d4ed8);
     transform: translateY(-2px);
@@ -228,7 +223,6 @@ body {
     gap: 12px;
     margin-bottom: 40px;
 }
-
 .genre-btn {
     padding: 8px 18px;
     border-radius: 20px;
@@ -239,12 +233,10 @@ body {
     transition: 0.3s;
     font-size: 0.85rem;
 }
-
 .genre-btn:hover {
     border-color: #3b82f6;
     color: #fff;
 }
-
 .genre-btn.active {
     background: #3b82f6;
     color: white;
