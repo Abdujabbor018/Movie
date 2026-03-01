@@ -1,31 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Components/Header/Header';
 import Cards from './Components/Cards/Cards';
+import { BarLoader } from 'react-spinners'; 
 import './App.css';
 
 const App = () => {
-  // 1. Til holati (default: o'zbekcha)
   const [lang, setLang] = useState('uz');
-
-  // 2. Mavzu holati (default: dark mode)
   const [isDark, setIsDark] = useState(true);
+  
+  const [loading, setLoading] = useState(true);
 
-  // Mavzu o'zgarganda body klassini yangilash (oq joylar qolmasligi uchun)
   useEffect(() => {
     document.body.className = isDark ? 'dark-theme' : 'light-theme';
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1700);
+
+    return () => clearTimeout(timer);
   }, [isDark]);
 
   return (
     <div className="app-wrapper">
-      <Header 
-        lang={lang} 
-        setLang={setLang} 
-        isDark={isDark} 
-        setIsDark={setIsDark} 
-      />
-      <main style={{ marginTop: '80px' }}> 
-        <Cards lang={lang} />
-      </main>
+      {loading ? (
+        <div className="loader-container">
+          <BarLoader color={isDark ? "red" : "#333"} size={15} margin={5} />
+          <p style={{ marginTop: '20px', color: isDark ? '#fff' : '#000' }}>
+             {lang === 'uz' ? 'Please Wait...' : 'Loading...'}
+          </p>
+        </div>
+      ) : (
+        <>
+          <Header 
+            lang={lang} 
+            setLang={setLang} 
+            isDark={isDark} 
+            setIsDark={setIsDark} 
+          />
+          <main style={{ marginTop: '80px' }}> 
+            <Cards lang={lang} />
+          </main>
+        </>
+      )}
     </div>
   );
 };

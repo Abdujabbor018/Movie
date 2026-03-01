@@ -8,7 +8,7 @@ const Header = ({ lang, setLang }) => {
       <div className="container navbar-wrapper">
         <div className="logo-section">
           <img src={Logo} alt="Logo" className="logo" />
-          <span className="brand-name">CineZone</span>
+          <span className="brand-name">MovieClub</span>
         </div>
 
         <nav className="navbar-list">
