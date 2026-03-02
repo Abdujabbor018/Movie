@@ -29,43 +29,37 @@ body {
     text-align: center;
     margin-top: 50px;
 }
-/* Spinner konteyneri uchun stillar */
 .loader-container {
-  display: flex; /* Flexbox yoqish */
-  flex-direction: column; /* Elementlarni ustma-ust taxlash (spinner va yozuv) */
-  justify-content: center; /* Gorizontal markazlash */
-  align-items: center; /* Vertikal markazlash */
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
   
-  /* Ekranni to'liq egallash */
   height: 100vh; 
   width: 100vw;
   
-  /* Boshqa elementlardan ustun turishi uchun */
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999; /* Header va Cards ustida turadi */
-  
-  /* Silliq o'tish effekti (ixtiyoriy) */
+  z-index: 9999; 
   transition: background-color 0.3s ease;
 }
 
-/* Spinner ostidagi yozuv stili */
 .loader-container p {
   font-family: sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
-  margin-top: 20px; /* Spinnerdan biroz masofa */
+  margin-top: 20px; 
 }
 
-/* --- Mavzuga qarab fon rangini o'zgartirish --- */
 
-/* To'q mavzu (Dark Mode) uchun fon */
 .dark-theme .loader-container {
-  background-color: #1a1a1a; /* To'q kulrang/qora fon */
+  background-color: #1a1a1a; 
 }
 
-/* Oq mavzu (Light Mode) uchun fon */
 .light-theme .loader-container {
-  background-color: #f9f9f9; /* Och kulrang/oq fon */
+  background-color: #f9f9f9;
+}
+.app-wrapper {
+  padding-top: 70px; 
 }

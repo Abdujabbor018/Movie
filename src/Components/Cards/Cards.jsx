@@ -132,9 +132,9 @@ const Cards = ({ lang }) => {
                 <div className="img-wrapper">
                   <img src={movie.poster} alt={movie.title} className="card-img" />
                   <span className="imdb-badge">IMDb {movie.imdbRating}</span>
-                  <div className="overlay">
-                    <button className="watch-btn">{t.watch}</button>
-                  </div>
+                  <div className="card-overlay">
+    <button className="watch-btn">{t.watch}</button>
+</div>
                 </div>
                 <div className="card-info">
                   <h2 className="card-title">

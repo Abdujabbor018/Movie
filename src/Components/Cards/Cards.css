@@ -67,7 +67,7 @@ body {
 }
 
 /* Overlay button */
-.overlay {
+.card-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -76,6 +76,10 @@ body {
     align-items: center;
     opacity: 0;
     transition: 0.4s;
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
 }
 
 .card:hover .overlay {

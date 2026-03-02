@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './Components/Header/Header';
 import Cards from './Components/Cards/Cards';
 import { BarLoader } from 'react-spinners'; 
+import Banner from './Components/Banner/Banner';
 import './App.css';
 
 const App = () => {
@@ -37,6 +38,9 @@ const App = () => {
             isDark={isDark} 
             setIsDark={setIsDark} 
           />
+<Banner lang={lang} isDark={isDark} />
+
+
           <main style={{ marginTop: '80px' }}> 
             <Cards lang={lang} />
           </main>

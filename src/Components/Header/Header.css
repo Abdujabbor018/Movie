@@ -169,3 +169,90 @@ body {
   box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
   border-color: #e50914;
 }
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    backdrop-filter: blur(10px); 
+    z-index: 9999; 
+}
+
+.modal-content {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    z-index: 10000; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    border: 1px solid #333;
+}
+
+/* Modal ichidagi sarlavha */
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Input va Textarea elementlari */
+.modal-content input, 
+.modal-content textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #2b2b2b; 
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+.modal-content textarea {
+    height: 120px;
+    resize: none;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 15px;
+}
+
+.send-btn {
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.send-btn:hover {
+    background: #ff1f29;
+}
+
+.close-btn {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.close-btn:hover {
+    background: #555;
+}
